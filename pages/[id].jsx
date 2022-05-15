@@ -7,7 +7,7 @@ export default function Home(props) {
 	const router = useRouter();
 	let [answer, setAnswer] = useState("");
 	let [question, setQuestion] = useState(
-		`${props.id}課ののことば. Enterキーを押してください`
+		`${props.id}課のことば. Enterキーを押してください`
 	);
 	let [questionFinished, setQuestionFinished] = useState(false);
 	let [input, setInput] = useState("");
@@ -109,7 +109,10 @@ export default function Home(props) {
 					<h1 className={styles.resultTitle}>Result</h1>
 					<h5>Correct: {sessiondata.correct.count}</h5>
 					<h5>Wrong: {sessiondata.incorrect.count}</h5>
-					<button onClick={handleresult} style={styles.answerButton}>
+					<button
+						className={"btn btn-primary" + " " + styles.button}
+						onClick={handleresult}
+					>
 						Click here for your answers
 					</button>
 				</div>
