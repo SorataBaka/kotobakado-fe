@@ -139,8 +139,8 @@ export default function Home(props) {
 export async function getServerSideProps(context) {
 	const id = context.params.id;
 	const req = context.req;
-	const protocol = req.headers["x-forwarded-proto"] || "http";
-	const baseUrl = req ? `${protocol}://${req.headers.host}` : "";
+
+	const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL || "http://localhost:3000";
 
 	const res = await fetch(`${baseUrl}/api/question/${id}`);
 	const data = await res.json();
