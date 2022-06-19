@@ -8,8 +8,8 @@
 	align-items: center;
 }
 .whiteBox {
-	width: 50%;
-	height: 50%;
+	width: auto;
+	height: auto;
 	background-color: white;
 	display: flex;
 	flex-direction: column;
@@ -17,7 +17,7 @@
 	align-items: center;
 	border-radius: 10px;
 	text-align: center;
-	padding: 20px;
+	padding: 50px;
 }
 .buttonRow {
 	display: flex;
