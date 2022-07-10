@@ -102,6 +102,14 @@ export default function Index() {
 					>
 						15 課
 					</button>
+					<button
+						className={"btn btn-primary" + " " + styles.button}
+						onClick={() => {
+							handleClick("16");
+						}}
+					>
+						16 課
+					</button>
 				</div>
 			</div>
 		</div>
