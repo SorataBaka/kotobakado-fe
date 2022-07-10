@@ -20,8 +20,8 @@ export default function Results() {
 					) : (
 						<>
 							<div className={styles.resultItem}>
-								<p>Japanese</p>
-								<p>English</p>
+								<p>Question</p>
+								<p>Correct Answer</p>
 								<p>Your Answer</p>
 							</div>
 							{sessiondata.incorrect.data.map((item, index) => (
