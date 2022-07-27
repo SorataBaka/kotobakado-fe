@@ -15,23 +15,23 @@ fn main() {
     #[allow(while_true)]
     while true {
         let mut english_word = String::new();
-        println!("English: ");
+        println!("Japanese: ");
         io::stdin().read_line(&mut english_word).unwrap();
         let english_word = english_word.trim();
         if english_word == "quit" {
             break;
         }
         let word = Word {
-            english: english_word.trim().to_string(),
-            japanese: String::new(),
+            japanese: english_word.trim().to_string(),
+            english: String::new(),
         };
         words.push(word);
     }
     for i in 0..words.len() {
-        println!("Japanese for '{}': ", &words[i].english);
+        println!("English for '{}': ", &words[i].japanese);
         let mut japanese_word = String::new();
         io::stdin().read_line(&mut japanese_word).unwrap();
-        words[i].japanese = japanese_word.trim().to_string();
+        words[i].english = japanese_word.trim().to_string();
     }
     // Write as JSON
     let json = serde_json::to_string(&words).unwrap();
